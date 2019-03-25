@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog site built with node, ejs, mongodb, mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planeswalker1/node-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/planeswalker1/node-blog/issues"
+  },
+  "homepage": "https://github.com/planeswalker1/node-blog#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
