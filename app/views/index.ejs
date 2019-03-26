@@ -1,0 +1,24 @@
+<% let title = 'Dan\'s Blog - Home'; %>
+<% include partials/header.ejs %>
+
+  <h1>Welcome to Dan's blog</h1>
+  <div class="blog">
+    <% blogs && blogs.forEach(function (blog) { %>
+      <div class="blog__item">
+        <div class="item__img">
+          <img class="img--blog" src="<%= blog.src %>" alt="<%= blog.alt %>">
+        </div>
+        <div class="item__content">
+          <h2><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h2>
+          <p><%= blog.date.toDateString() %></p>
+          <p><%- blog.body.substring(0, 100) %></p>
+          <a class="btn btn--black" href="/blogs/<%= blog._id %>">
+            Read More!  <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,13 @@
+<% let title =  blog.title + ' · Dan\'s Blog'; %>
+<% include partials/header.ejs %>
+  <div class="container__contain container__contain--border">
+    <h1><%= blog.title %></h1>
+    <img src="<%= blog.src %>" alt="<%= blog.alt %>">
+    <p><%= blog.date.toDateString() %></p>
+    <p class="contain__text"><%- blog.body %></p>
+    <a class="btn btn--orange" href="/blogs/<%= blog._id %>/edit">Edit</a>
+    <form class="form--inline" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+      <button class="btn btn--red" type="submit">Delete</button>
+    </form>
+  </div>
+<% include partials/footer.ejs %>

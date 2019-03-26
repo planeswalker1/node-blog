@@ -1,0 +1,27 @@
+<% let title = 'New Post · Dan\'s Blog'; %>
+<% include partials/header.ejs %>
+
+  <div class="container__contain">
+    <h1>New Blog</h1>
+    <form class="form" action="/blogs" method="POST">
+      <div class="form-group">
+        <label for="title">Title: </label>
+        <input id="title" type="text" name="blog[title]" placeholder="Title" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Image Source: </label>
+        <input id="image" type="text" name="blog[src]" placeholder="Image source" required>
+      </div>
+      <div class="form-group">
+        <label for="alt">Image description: </label>
+        <input id="alt" type="text" name="blog[alt]" placeholder="Image description" required>
+      </div>
+      <div class="form-group">
+        <label for="content">Blog Content: </label>
+        <textarea id="content" name="blog[body]" placeholder="Post goes here" cols="30" rows="10" required></textarea>
+      </div>
+      <button class="btn btn--black" type="submit">Submit</button>
+    </form>
+  </div>
+
+<% include partials/footer.ejs %>

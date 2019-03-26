@@ -1,23 +1,26 @@
 {
-  "name": "blog",
+  "name": "node-blog",
   "version": "1.0.0",
-  "description": "blog site built with node, ejs, mongodb, mongoose",
+  "description": "A blog website to practice mongoose commands, REST conventions, node.js, grunt, ejs",
   "main": "app.js",
+  "author": "Daniel Munoz <daniel.munozdev@gmail.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/planeswalker1/node-blog.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/planeswalker1/node-blog/issues"
-  },
-  "homepage": "https://github.com/planeswalker1/node-blog#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-sanitizer": "^1.0.5",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.19"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-stylus": "^1.2.0",
+    "nodemon": "^1.18.10"
   }
 }
