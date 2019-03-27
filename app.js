@@ -66,5 +66,5 @@ app.use(function (err, req, res, next) {
 });
 
 app.listen(config.port, function () {
-  console.log('listening at http://localhost:%s in %s mode',config.PORT, app.get('env'));
+  console.log('listening at http://localhost:%s in %s mode',config.port, app.get('env'));
 });
